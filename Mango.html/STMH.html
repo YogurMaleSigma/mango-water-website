@@ -6,6 +6,18 @@
     <title>Stop The Mango Hate</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for animations */
+        .hidden {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,41 +33,67 @@
                     <li class="nav-item"><a class="nav-link" href="mangos.html">Mangos</a></li>
                     <li class="nav-item"><a class="nav-link" href="still-water.html">Still Water</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="favorite-mango.html">Favorite Mango</a></li>
+                    <li class="nav-item"><a class="nav-link" href="those-who-know.html">Those Who Know</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Every-Mango.html">All Mangos</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <div class="container mt-5">
-        <h1>Stopping the mango hate</h1>
-        <img src="mango-infographic.jpg" alt="Nutritional Facts" class="img-fluid">
-        <h2>Health Benefits</h2>
-        <ul>
+        <h1 class="hidden">Stopping the Mango Hate</h1>
+        <img src="https://i.pinimg.com/originals/c1/82/09/c1820995883806974565ae158c47cba8.jpg" alt="Nutritional Facts" class="img-fluid hidden">
+        <h2 class="hidden">Welcome to the Mango Appreciation Movement!</h2>
+        <p class="hidden">Join us in celebrating the wonders of mangoes and putting an end to Mango Hate!</p>
+        <h3 class="hidden">Why Mangos are the Best</h3>
+        <ul class="hidden">
             <li>Rich in vitamins A and C</li>
             <li>High in fiber</li>
             <li>Supports digestive health</li>
         </ul>
-        <h2>Recipes</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://thumbs.dreamstime.com/z/vector-prohibition-sign-mango-do-not-pluck-tropical-fruits-allergy-danger-product-does-contain-forbidden-stickers-284784017.jpg" class="card-img-top" alt="Mango Salsa">
-                    <div class="card-body">
-                        <h5 class="card-title">Mango Salsa</h5>
-                        <a href="#" class="btn btn-primary">View Recipe</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more recipe cards as needed -->
-        </div>
+        <hr class="hidden">
+        <h3 class="hidden">The Case Against Mango Hate</h3>
+        <ul class="hidden">
+            <li>1. The Mess Factor
+                Yes, eating a mango can be a slippery affair. But isn’t that part of the fun? Embrace the juice! It’s like a tropical splash party!</li>
+            <li>2. The Pit Dilemma
+                Sure, navigating the pit can feel like a game of fruit roulette, but who doesn’t love a little challenge? It’s a delicious adventure!</li>
+            <li>3. Jealousy
+                Other fruits just can’t handle how fabulous mangoes are. Let’s spread the love and show them there’s room for everyone!</li>
+        </ul>
+        <hr class="hidden">
     </div>
 
     <footer class="text-center py-4">
         <p>&copy; 2024 Mango & Water</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Fade in elements as they are scrolled into view
+            function reveal() {
+                $('.hidden').each(function() {
+                    var elementTop = $(this).offset().top;
+                    var scrollTop = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    
+                    if (elementTop < scrollTop + windowHeight - 100) {
+                        $(this).addClass('visible').removeClass('hidden');
+                    }
+                });
+            }
+            
+            $(window).on('scroll', function() {
+                reveal();
+            });
+
+            // Initial reveal for elements in view on page load
+            reveal();
+        });
+    </script>
 </body>
 </html>

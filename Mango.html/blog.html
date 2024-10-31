@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Mango Blog</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for animations */
+        .hidden {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,25 +33,64 @@
                     <li class="nav-item"><a class="nav-link" href="mangos.html">Mangos</a></li>
                     <li class="nav-item"><a class="nav-link" href="still-water.html">Still Water</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="favorite-mango.html">Favorite Mango</a></li>
+                    <li class="nav-item"><a class="nav-link" href="those-who-know.html">Those Who Know</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Every-Mango.html">All Mangos</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <div class="container mt-5">
-        <h1>Blog</h1>
+        <h1 class="hidden">The Wonderful World of Mangos</h1>
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/25/mango-1869598_1280.jpg" alt="Fresh Mangos" class="img-fluid hidden">
+        
+        <h2 class="hidden">Why Mangos are the King of Fruits</h2>
+        <p class="hidden">Mangos are not just delicious; they're also packed with nutrients! Rich in vitamins A and C, they support your immune system and promote healthy skin. Plus, their natural sweetness makes them a favorite for smoothies, salsas, and desserts!</p>
+        
+        <img src="https://cdn.pixabay.com/photo/2018/01/14/16/05/mango-3082621_1280.jpg" alt="Mango Dishes" class="img-fluid hidden">
+        
+        <h2 class="hidden">How to Enjoy Mangos</h2>
+        <p class="hidden">There are countless ways to enjoy this tropical fruit! Here are a few ideas:</p>
+        <ul class="hidden">
+            <li>Slice them fresh for a snack or salad topping.</li>
+            <li>Blend into smoothies for a refreshing drink.</li>
+            <li>Make mango salsa for a zesty dip or topping for tacos.</li>
+            <li>Use them in desserts like sorbet or cheesecake!</li>
+        </ul>
+
+        <h2 class="hidden">Interesting Mango Facts</h2>
+        <ul class="hidden">
+            <li>Mangos originated in South Asia over 5,000 years ago.</li>
+            <li>They are the national fruit of India, Pakistan, and the Philippines.</li>
+            <li>There are over 1,000 varieties of mangoes grown worldwide!</li>
+            <li>Mangos are considered a symbol of love in many cultures.</li>
+        </ul>
+    </div>
+
+    <div class="container mt-5" id="featured">
+        <h2>Featured Articles</h2>
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="blog-thumbnail.jpg" class="card-img-top" alt="Mango Benefits">
+                    <img src="https://th.bing.com/th/id/OSK.HEROhSfada6XC6ndNMZM1nY65OrFDcGUFgueST7kMmBj5y4?rs=1&pid=ImgDetMain" class="card-img-top" alt="Mango Recipe">
                     <div class="card-body">
-                        <h5 class="card-title">Health Benefits of Mangos</h5>
-                        <p class="card-text">Explore how mangos can boost your health.</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
+                        <h5 class="card-title">Mango Salsa Recipe</h5>
+                        <p class="card-text">A refreshing mango salsa recipe to brighten your meals.</p>
+                        <a href="mangos.html" class="btn btn-primary">Read More</a>
                     </div>
                 </div>
             </div>
-            <!-- Add more blog posts as needed -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://iythealth.com/wp-content/uploads/2017/11/Mango-allergy.jpg" class="card-img-top" alt="Mango Recipe">
+                    <div class="card-body">
+                        <h5 class="card-title">Stop Mango Hate</h5>
+                        <p class="card-text">The Hating of Mangos has gone to far, they do not cause allergies.</p>
+                        <a href="STMH.html" class="btn btn-primary">Read More</a>
+                    </div>
+            </div>
+            
         </div>
     </div>
 
@@ -50,5 +101,28 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Function to reveal elements as they scroll into view
+            function reveal() {
+                $('.hidden').each(function() {
+                    var elementTop = $(this).offset().top;
+                    var scrollTop = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    
+                    if (elementTop < scrollTop + windowHeight - 100) {
+                        $(this).addClass('visible').removeClass('hidden');
+                    }
+                });
+            }
+            
+            $(window).on('scroll', function() {
+                reveal();
+            });
+
+            // Initial reveal for elements in view on page load
+            reveal();
+        });
+    </script>
 </body>
 </html>

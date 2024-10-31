@@ -6,6 +6,19 @@
     <title>Discover Mangos & Water</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for animations */
+        .hidden {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+    </style>
+
 </head>
 <body>
     <header>
@@ -21,14 +34,16 @@
                     <li class="nav-item"><a class="nav-link" href="mangos.html">Mangos</a></li>
                     <li class="nav-item"><a class="nav-link" href="still-water.html">Still Water</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="STMH.html">Stop Mango Hate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="favorite-mango.html">favorite Mango</a></li>
+                    <li class="nav-item"><a class="nav-link" href="those-who-know.html">Those Who Know</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Every-Mango.html">All Mangos</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <section class="hero text-center bg-warning py-5">
-        <h1>Discover the Power of Mangos and Water</h1>
+        <h1 class="mangoO">Discover the Power of Mangos and Water</h1>
         <p>Your guide to nutrition and hydration.</p>
         <a href="https://en.wikipedia.org/wiki/Mango" class="btn btn-light">Learn More</a>
     </section>
@@ -66,5 +81,28 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Fade in elements as they are scrolled into view
+            function reveal() {
+                $('.hidden').each(function() {
+                    var elementTop = $(this).offset().top;
+                    var scrollTop = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    
+                    if (elementTop < scrollTop + windowHeight - 100) {
+                        $(this).addClass('visible').removeClass('hidden');
+                    }
+                });
+            }
+            
+            $(window).on('scroll', function() {
+                reveal();
+            });
+
+            // Initial reveal for elements in view on page load
+            reveal();
+        });
+    </script>
 </body>
 </html>
