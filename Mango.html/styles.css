@@ -1,0 +1,31 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2 {
+    color: #FFCC00; /* Primary Color */
+}
+
+.footer {
+    background-color: #66CC66; /* Secondary Color */
+}
+
+.hero {
+    background: url('https://th.bing.com/th/id/OIP.dOG0_65oehvwwD4f5sm2swAAAA?rs=1&pid=ImgDetMain') no-repeat center center;
+    background-size: cover;
+    color: white;
+    opacity: 0.9;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.mangoO{
+    color:#22522a
+
+}
+.mP{
+    height:600px;
+    width:600px;
+}
