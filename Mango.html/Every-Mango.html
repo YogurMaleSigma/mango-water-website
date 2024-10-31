@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mango Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for animations */
+        .hidden {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .mango-card {
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .mango-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <a class="navbar-brand" href="#">Mango & Water</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mangos.html">Mangos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="still-water.html">Still Water</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="favorite-mango.html">Favorite Mango</a></li>
+                    <li class="nav-item"><a class="nav-link" href="those-who-know.html">Those Who Know</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Every-Mango.html">All Mangos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <h1 class="hidden">The Wonderful World of Mangos</h1>
+        <img src="https://natureworksnursery.com/wp-content/uploads/2021/09/Mango-Poster.jpeg" alt="Fresh Mangos" class="img-fluid hidden">
+        
+        <h2 class="hidden">Types of Mangos</h2>
+        <div class="row">
+            <!-- Mango Card 1 -->
+            <!-- Mango Card 1 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-alphonso.html';">
+        <img src="https://cdn.pixabay.com/photo/2013/06/20/17/47/mango-51153_1280.jpg" class="card-img-top" alt="Alphonso Mango">
+        <div class="card-body">
+            <h5 class="card-title">Alphonso Mango</h5>
+            <p class="card-text">Known for its sweetness and richness, often called the king of mangoes.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 2 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-haden.html';">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/26/mango-1869599_1280.jpg" class="card-img-top" alt="Haden Mango">
+        <div class="card-body">
+            <h5 class="card-title">Haden Mango</h5>
+            <p class="card-text">A popular variety with a rich flavor and bright color.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 3 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-kent.html';">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/25/mango-1869598_1280.jpg" class="card-img-top" alt="Kent Mango">
+        <div class="card-body">
+            <h5 class="card-title">Kent Mango</h5>
+            <p class="card-text">Sweet and juicy, perfect for eating fresh or in smoothies.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 4 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-tommy-atkins.html';">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/27/mango-1869600_1280.jpg" class="card-img-top" alt="Tommy Atkins Mango">
+        <div class="card-body">
+            <h5 class="card-title">Tommy Atkins Mango</h5>
+            <p class="card-text">Widely available and known for its long shelf life.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 5 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-osean.html';">
+        <img src="https://cdn.pixabay.com/photo/2020/05/05/17/50/mango-4128578_1280.jpg" class="card-img-top" alt="Osean Mango">
+        <div class="card-body">
+            <h5 class="card-title">Osean Mango</h5>
+            <p class="card-text">A hybrid variety known for its sweetness and aroma.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 6 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-pairi.html';">
+        <img src="https://cdn.pixabay.com/photo/2019/06/07/12/31/mango-4252077_1280.jpg" class="card-img-top" alt="Pairi Mango">
+        <div class="card-body">
+            <h5 class="card-title">Pairi Mango</h5>
+            <p class="card-text">A sweet mango with a unique flavor, often enjoyed in summer.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 7 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-mangifera.html';">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/22/mango-1869592_1280.jpg" class="card-img-top" alt="Mangifera Mango">
+        <div class="card-body">
+            <h5 class="card-title">Mangifera Mango</h5>
+            <p class="card-text">A lesser-known variety with a unique taste and texture.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 8 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-himalaya.html';">
+        <img src="https://cdn.pixabay.com/photo/2018/01/05/13/47/mango-3061235_1280.jpg" class="card-img-top" alt="Himalaya Mango">
+        <div class="card-body">
+            <h5 class="card-title">Himalaya Mango</h5>
+            <p class="card-text">Sweet and fragrant, it grows in the foothills of the Himalayas.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 9 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-apple.html';">
+        <img src="https://cdn.pixabay.com/photo/2019/06/06/14/06/mango-4248474_1280.jpg" class="card-img-top" alt="Apple Mango">
+        <div class="card-body">
+            <h5 class="card-title">Apple Mango</h5>
+            <p class="card-text">Crisp and sweet, often used in salads and desserts.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 10 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-bombay.html';">
+        <img src="https://cdn.pixabay.com/photo/2019/06/06/14/06/mango-4248473_1280.jpg" class="card-img-top" alt="Bombay Mango">
+        <div class="card-body">
+            <h5 class="card-title">Bombay Mango</h5>
+            <p class="card-text">Known for its vibrant taste and rich texture.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 11 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-palma.html';">
+        <img src="https://cdn.pixabay.com/photo/2016/06/24/13/22/mango-1479380_1280.jpg" class="card-img-top" alt="Palma Mango">
+        <div class="card-body">
+            <h5 class="card-title">Palma Mango</h5>
+            <p class="card-text">A sweet variety popular in tropical regions.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 12 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-bourbon.html';">
+        <img src="https://cdn.pixabay.com/photo/2018/06/20/10/29/mango-3485470_1280.jpg" class="card-img-top" alt="Bourbon Mango">
+        <div class="card-body">
+            <h5 class="card-title">Bourbon Mango</h5>
+            <p class="card-text">Known for its rich flavor and aromatic sweetness, popular in desserts.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 13 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-chaunsa.html';">
+        <img src="https://cdn.pixabay.com/photo/2017/08/30/01/08/mango-2695326_1280.jpg" class="card-img-top" alt="Chaunsa Mango">
+        <div class="card-body">
+            <h5 class="card-title">Chaunsa Mango</h5>
+            <p class="card-text">Sweet and fragrant, it's a favorite during the summer in South Asia.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 14 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-kesar.html';">
+        <img src="https://cdn.pixabay.com/photo/2020/05/05/17/50/mango-4128578_1280.jpg" class="card-img-top" alt="Kesar Mango">
+        <div class="card-body">
+            <h5 class="card-title">Kesar Mango</h5>
+            <p class="card-text">Known for its sweetness and bright orange flesh, often used in desserts.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 15 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-sweet-heart.html';">
+        <img src="https://cdn.pixabay.com/photo/2020/05/05/17/50/mango-4128578_1280.jpg" class="card-img-top" alt="Sweet Heart Mango">
+        <div class="card-body">
+            <h5 class="card-title">Sweet Heart Mango</h5>
+            <p class="card-text">A small, juicy variety known for its rich flavor and sweetness.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 16 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-lassi.html';">
+        <img src="https://cdn.pixabay.com/photo/2020/05/05/17/50/mango-4128578_1280.jpg" class="card-img-top" alt="Lassi Mango">
+        <div class="card-body">
+            <h5 class="card-title">Lassi Mango</h5>
+            <p class="card-text">Often used in the popular mango lassi drink, creamy and refreshing.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 17 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-rose.html';">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/26/mango-1869599_1280.jpg" class="card-img-top" alt="Rose Mango">
+        <div class="card-body">
+            <h5 class="card-title">Rose Mango</h5>
+            <p class="card-text">Famous for its floral aroma and sweet taste, often enjoyed fresh.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 18 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-honey.html';">
+        <img src="https://cdn.pixabay.com/photo/2020/06/11/12/44/mango-5063006_1280.jpg" class="card-img-top" alt="Honey Mango">
+        <div class="card-body">
+            <h5 class="card-title">Honey Mango</h5>
+            <p class="card-text">Known for its sweet, honey-like flavor, popular in tropical regions.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 19 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-dushehari.html';">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/24/mango-1869595_1280.jpg" class="card-img-top" alt="Dushehari Mango">
+        <div class="card-body">
+            <h5 class="card-title">Dushehari Mango</h5>
+            <p class="card-text">A sweet variety known for its juicy flesh and rich flavor.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 20 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-langra.html';">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/25/mango-1869596_1280.jpg" class="card-img-top" alt="Langra Mango">
+        <div class="card-body">
+            <h5 class="card-title">Langra Mango</h5>
+            <p class="card-text">A tangy and sweet variety, popular in northern India.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 21 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-bourbon.html';">
+        <img src="https://cdn.pixabay.com/photo/2018/06/20/10/29/mango-3485470_1280.jpg" class="card-img-top" alt="Bourbon Mango">
+        <div class="card-body">
+            <h5 class="card-title">Bourbon Mango</h5>
+            <p class="card-text">Known for its rich flavor and aromatic sweetness, popular in desserts.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 22 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-chaunsa.html';">
+        <img src="https://cdn.pixabay.com/photo/2017/08/30/01/08/mango-2695326_1280.jpg" class="card-img-top" alt="Chaunsa Mango">
+        <div class="card-body">
+            <h5 class="card-title">Chaunsa Mango</h5>
+            <p class="card-text">Sweet and fragrant, it's a favorite during the summer in South Asia.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 23 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-kesar.html';">
+        <img src="https://cdn.pixabay.com/photo/2020/05/05/17/50/mango-4128578_1280.jpg" class="card-img-top" alt="Kesar Mango">
+        <div class="card-body">
+            <h5 class="card-title">Kesar Mango</h5>
+            <p class="card-text">Known for its sweetness and bright orange flesh, often used in desserts.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Mango Card 24 -->
+<div class="col-md-4 mb-4">
+    <div class="card mango-card hidden" onclick="window.location.href='mango-sweet-heart.html';">
+        <img src="https://cdn.pixabay.com/photo/2020/05/05/17/50/mango-4128578_1280.jpg" class="card-img-top" alt="Sweet Heart Mango">
+        <div class="card-body">
+            <h5 class="card-title">Sweet Heart Mango</h5>
+            <p class="card-text">A small, juicy variety known for its rich flavor and sweetness.</p>
+        </div>
+    </div>
+</div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-4">
+        <p>&copy; 2024 Mango & Water</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            // Fade in elements as they are scrolled into view
+            function reveal() {
+                $('.hidden').each(function() {
+                    var elementTop = $(this).offset().top;
+                    var scrollTop = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    
+                    if (elementTop < scrollTop + windowHeight - 100) {
+                        $(this).addClass('visible').removeClass('hidden');
+                    }
+                });
+            }
+            
+            $(window).on('scroll', function() {
+                reveal();
+            });
+
+            // Initial reveal for elements in view on page load
+            reveal();
+        });
+    </script>
+</body>
+</html>
